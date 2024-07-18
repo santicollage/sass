@@ -76,6 +76,10 @@ article {
       font-size: 1.6rem;
       font-weight: 700;
       cursor: pointer;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   } 
   .img-section {
@@ -148,8 +152,68 @@ section {
   }
 }
 
+.about-us {
+  padding-bottom: 40px;
+  h2 {
+    font-weight: bold;
+    padding-bottom: 40px;
+  }
+  .mission-section {
+    @include flexCenter(row, space-around, center);
+    .info {
+      @include flexCenter(row, space-around, center);
+      width: 50%;
+      padding: 0 30px;
+      p {
+        padding: 0 40px;
+        text-align: center;
+        font-size: $paragraph-size;
+        color: #E86424;
+      }
+    }
+  }
+}
+
+.gallery {
+  .gallery-images {
+    @include flexCenter(row, space-between, center);
+    gap: 20px;
+    padding-bottom: 40px;
+
+    img {
+      width: 30%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: all 0.4s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.location {
+  color: #E86424;
+  text-align: center;
+  .map {
+    @include flexCenter(row, center, center);
+    padding-bottom: 30px;
+    img {
+      width: 80%;
+      object-fit: cover;
+    }
+  }
+}
+
 .footer {
+  @include flexCenter(row, space-between, center);
   background-color: $quaternary-color;
   width: 100%;
-  height: 250px;
+  color: white;
+  padding: 40px;
+  .social-media {
+    @include flexCenter(row, center, center);
+    gap: 40px;
+  }
 }
